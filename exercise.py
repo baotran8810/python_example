@@ -196,3 +196,30 @@ if __name__ == "__main__":
 
 
    
+# Đề bài:
+# Một cửa hàng bán đồ điện tử, nơi có các loại sản phẩm như điện thoại, máy tính xách tay và tai nghe. Mỗi sản phẩm có thông tin như tên sản phẩm, loại sản phẩm, số lượng trong kho và giá bán. Bạn cần xây dựng một chương trình quản lý kho hàng cho cửa hàng này.
+
+# Yêu cầu:
+
+# Nhập thông tin sản phẩm:
+# Nhập danh sách các sản phẩm, mỗi sản phẩm có các thông tin: tên sản phẩm, loại sản phẩm (điện thoại, máy tính xách tay, tai nghe), số lượng trong kho, và giá bán.
+# Xử lý thông tin:
+# Tính tổng giá trị của kho hàng (tổng giá trị = số lượng * giá bán cho mỗi sản phẩm).
+# Tính tổng số lượng các sản phẩm trong kho.
+# Tìm sản phẩm có giá trị cao nhất trong kho hàng.
+# Tìm kiếm sản phẩm:
+# Nhập tên sản phẩm và kiểm tra xem sản phẩm đó có trong kho không. Nếu có, in ra thông tin chi tiết về sản phẩm, nếu không thì thông báo sản phẩm không có trong kho.
+# Cập nhật số lượng sản phẩm:
+# Nhập tên sản phẩm và số lượng cần thêm vào kho. Cập nhật số lượng của sản phẩm đó trong kho.
+# Xuất thông tin:
+# In ra thông tin tất cả các sản phẩm trong kho hàng (tên sản phẩm, loại, số lượng, giá bán).
+# In ra tổng số lượng và tổng giá trị của kho hàng.
+
+
+products = [
+    {"name": "iPhone 14", "category": "Điện thoại", "quantity": 50, "price": 20000000},
+    {"name": "Dell XPS 13", "category": "Máy tính xách tay", "quantity": 30, "price": 25000000},
+    {"name": "AirPods Pro 2", "category": "Tai nghe", "quantity": 100, "price": 5000000},
+    {"name": "Samsung Galaxy S23", "category": "Điện thoại", "quantity": 40, "price": 18000000},
+    {"name": "MacBook Air M2", "category": "Máy tính xách tay", "quantity": 20, "price": 28000000}
+]
