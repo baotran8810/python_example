@@ -8,11 +8,36 @@
 # 	•	Tam giác thường (không thuộc các loại trên)
 
 # Yêu cầu in ra kết luận tương ứng với dữ liệu đầu vào.
-
+def tamgiac():
+    a = int(input("Nhập số thực dương a: "))
+    b = int(input("Nhập số thực dương b: "))
+    c = int(input("Nhập số thực dương c: "))    
+    if a + b > c and a + c > b and b + c > a:
+        if a ==b ==c:
+            print("Tam giác đều")
+        elif a**2 + b**2 >= c**2 or c**2 + b**2 >= a**2 or a**2 + b**2 >= c**2:
+            print("Tam giác vuông")
+            if a == b or b == c or a == c:
+                print("Tam giác vuông cân")
+        elif a == b or b == c or a == c:
+            print("Tam giác cân")
+        else: print("Tam giác thường")
+    else: print("Đây không phải là tam giác")
 
 # Đề bài:
 # Viết chương trình cho phép người dùng nhập vào một tháng và một năm (cả hai đều là số nguyên). Hãy xác định và in ra số ngày của tháng đó trong năm tương ứng.
-
+def mmyyyy():
+    m = int(input(("Nhập vào tháng ")))
+    y = int(input(("Nhập vào năm ")))
+    if 1<=m<=12 and y>0:
+        if m ==1 or m==3 or m== 5 or m==7 or m==8 or m==10 or m==12:
+            print(f"Tháng {m} có 31 ngày")
+        elif m ==2:
+            if y%4==0:
+                print(f"Tháng {m} có 29 ngày")
+            else: print(f"Tháng {m} có 28 ngày")
+        else: print(f"Tháng {m} có 30 ngày")
+    else: print("Nhập cái gì có nghĩa giùm")
 # Yêu cầu chi tiết:
 # 	1.	Tháng là giá trị nguyên trong khoảng 1 \leq \text{tháng} \le 12.
 # 	2.	Năm là giá trị nguyên dương, ví dụ 2023, 2024, v.v.
@@ -34,26 +59,140 @@
 
 # Đề bài:
 # Viết chương trình cho phép người dùng nhập vào một số nguyên dương a. Hãy in ra bảng cửu chương của số a đó theo định dạng thông thường (từ phép nhân 1 đến phép nhân 10).
+def bcc():
+    a = int(input("Nhập số nguyên a: "))
+    print(f"Bảng cửu chương {a} là:")
+    for i in range (1,11):
+        print(f" {a} x {i} = {a*i}")
 
-# Yêu cầu chi tiết:
-# 	1.	Nhập một số nguyên a \ge 1.
-# 	2.	Xuất ra kết quả lần lượt:
+# Nhập vào danh sách học sinh gồm n học sinh, mỗi học sinh gồm các thông tin: họ tên, điểm môn toán, lý, hóa. Yêu cầu:
+# 1. In ra danh sách học sinh và điểm từng môn + điểm trung bình.
+# 2. Tính điểm trung bình của cả lớp.
+# 3. Tìm học sinh có điểm trung bình cao nhất và thấp nhất.
+# 4. In ra danh sách điểm trung bình theo thứ tự giảm dần.
+# 5. In ra danh sách học sinh có điểm trung bình dưới 5.
+def danhsach():
+    listHoTen = []
+    listDiemToan = []
+    listDiemLy = []
+    listDiemHoa = []
+    listDiemTB = []
+    n=int(input("Số lượng học sinh: "))
+    for i in range (1,n+1):
+        hoten = input(f"Nhap ho ten cua hoc sinh {i}: ")
+        listHoTen.append(hoten)
+        diemtoan = float(input(f"Nhap diem toan cua hoc sinh {i}: "))
+        listDiemToan.append(diemtoan)
+        diemly = float(input(f"Nhap diem ly cua hoc sinh {i}: "))
+        listDiemLy.append(diemly)
+        diemhoa = float(input(f"Nhap diem hoa cua hoc sinh {i}: "))
+        listDiemHoa.append(diemhoa)
+        dtb = (diemtoan + diemly + diemhoa)/3
+        listDiemTB.append(dtb)
+    print(f"Ho ten: {listHoTen}")
+    print(f"Diem toan {listDiemToan}")
+    print(f"Diem ly {listDiemLy}")
+    print(f"Diem hoa {listDiemHoa}")
+    print(f"Diem trung binh {listDiemTB}")
+    print(f"Diemtrung binh cua ca lop la:  {sum(listDiemTB)/n}")
 
-# a \times 1 = \dots
+    caoDiem = 0;
+    thapDiem =0;
+    for i in range (0,n):
+        if listDiemTB[i] == max(listDiemTB):
+            caoDiem = i
+            
+        if listDiemTB[i] == min(listDiemTB):
+            thapDiem = i
+            
+    print(f"Hoc sinh co diem trung binh cao nhat la {listHoTen[caoDiem]}")
+    print(f"Hoc sinh co diem trung binh thap nhat la {listHoTen[thapDiem]}")
 
+    print(f"Danh sach diem trung binh theo thu tu giam dan la: {listDiemTB.sort(reverse=True)}")
+    print("Danh sach hoc sinh co diem trung binh duoi 5 la ")
+    for i in range (0,n):
+        if listDiemTB[i] <= 5:
+            print({listHoTen[i]})
 
-# a \times 2 = \dots
+# Đề bài: Quản lý đơn hàng trong cửa hàng trực tuyến
+def quanlydonhang():
+    listDonhang = []
+    n = int(input("Số lượng đơn hàng cần thêm vào là: "))
+    i = 0;
+    while i < n:
+        donhang = input(f"Nhập đơn hàng số {i+1} ").split(",")
+        # print(donhang[2])
+        if donhang[2].lower() == "true":
+            donhang[2] = True
+        elif donhang[2].lower() == "false":
+            donhang[2] = False
+        else: 
+            print("Nhập cho đúng True/False")
+            continue
+        thongtindonhang = [donhang[0],int(donhang[1]),donhang[2]]
+        # if len(thongtindonhang) != 3 :
+        #     print("Nhập cho đúng 3 phần tử!!! ")
+        # else:
+        listDonhang.append(thongtindonhang)
+        i+=1
+    # for i in range (1,n+1):
+        #"don hang a, 123, True "
+        #["donh", int(123), "True"]
+  
 
+        # madonhang = str(input(f"Nhập đơn hàng thứ {i}: "))
+        # giatri = int(input(f"Nhập giá trị đơn hàng {i}: "))
+        # trangthai = bool(int(input(f"Trạng thái đơn hàng {i}: ")))
+        #2
+        # donhang = [madonhang,giatri,trangthai]
+        # listDonhang.append(thongtindonhang)
+    print(listDonhang)
+    Tongdoanhthu = 0
+    Doncogiatricaonhat = listDonhang[0]
+    listChuagiao = []
+    for i in range (0,n):
+        if listDonhang[i][2] == True:
+            Tongdoanhthu = Tongdoanhthu + listDonhang[i][1]
+    
+        if listDonhang[i][1] > Doncogiatricaonhat[1]:
+            Doncogiatricaonhat = listDonhang[i]
+    
+        if listDonhang[i][2] == False:
+            listChuagiao.append(listDonhang[i])
 
-# \dots
+    print(Tongdoanhthu)
+    print(Doncogiatricaonhat)
+    print(listChuagiao)
 
+# Một cửa hàng trực tuyến cần quản lý danh sách đơn hàng của khách. Mỗi đơn hàng bao gồm:
+#   •  Mã đơn hàng (kiểu str)
+#   •  Tổng giá trị đơn hàng (kiểu int)
+#   •  Trạng thái giao hàng (kiểu bool), trong đó True là đã giao, False là chưa giao.
 
-# a \times 10 = \dots
+# Cửa hàng lưu danh sách đơn hàng dưới dạng list, trong đó mỗi đơn hàng được biểu diễn bằng một List (mã đơn, giá trị, trạng thái).
 
+# Viết chương trình Python để thực hiện các chức năng sau:
+#   1.  Thêm đơn hàng mới vào danh sách.
+#   2.  Hiển thị danh sách đơn hàng theo thứ tự nhập.
+#   3.  Tính tổng doanh thu từ các đơn hàng đã giao.
+#   4.  Tìm đơn hàng có giá trị cao nhất.
+#   5.  Lọc ra danh sách các đơn hàng chưa giao.
 
+# Yêu cầu:
+#   •  Viết các hàm thực hiện từng chức năng trên.
+#   •  Cho phép nhập dữ liệu từ người dùng để thêm đơn hàng.
+#   •  Hiển thị kết quả rõ ràng.
 
-from os import name
-
+# orders = [
+#     ("DH001", 500, True),
+#     ("DH002", 1200, False),
+#     ("DH003", 750, True),
+#     ("DH004", 300, False),
+#     ("DH005", 1000, True),
+# ]
 
 if __name__ == "__main__":
-    print("Chương trình in ra bảng cửu chương của số a")
+    quanlydonhang()
+
+
+   
