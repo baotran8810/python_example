@@ -223,3 +223,37 @@ products = [
     {"name": "Samsung Galaxy S23", "category": "Điện thoại", "quantity": 40, "price": 18000000},
     {"name": "MacBook Air M2", "category": "Máy tính xách tay", "quantity": 20, "price": 28000000}
 ]
+
+
+
+
+# 1,0V,K,8056,,2024-03-31,2024-10-26,1234567,0,68,AT7,VCS,VCS,9:55,,9:55,,,,J,1,2,3,4,5,6,7
+# 2,0V,K,8090,,2024-03-31,2024-10-25,0000507,0,68,AT7,VCS,VCS,6:50,,6:50,,,,J,,,,,5,,7
+# 3,0V,K,,8091,2024-03-31,2024-10-25,0000507,0,68,AT7,,,,7:15,,7:15,VCS,VCS,J,,,,,5,,7
+# 4,0V,K,8068,,2024-03-31,2024-05-23,0204067,0,68,AT7,VCS,VCS,11:10,,11:10,,,,J,,2,,4,,6,7
+# 5,0V,K,,8063,2024-03-31,2024-10-20,0000007,0,68,AT7,,,,5:20,,5:20,VCS,VCS,J,,,,,,,7
+# 6,0V,K,,8061,2024-03-31,2024-08-31,1234060,0,68,AT7,,,,6:35,,6:35,CAH,CAH,J,1,2,3,4,,6,
+# 7,0V,K,8058,,2024-03-31,2024-10-26,0234000,0,68,AT7,VCS,VCS,2:30,,2:30,,,,J,,2,3,4,,,
+# 8,0V,K,,8059,2024-03-31,2024-10-20,0000007,0,68,AT7,,,,23:50,,23:50,VCS,VCS,J,,,,,,,7
+# 9,0V,K,,8093,2024-03-31,2024-04-04,0000500,0,68,AT7,,,,6:30,,6:30,VCS,VCS,J,,,,,5,,
+# 10,0V,K,8052,,2024-03-31,2024-05-19,0000007,0,68,AT7,VCS,VCS,3:50,,3:50,,,,J,,,,,,,7
+# 11,0V,K,,8053,2024-03-31,2024-05-19,0000007,0,68,AT7,,,,1:10,,1:10,VCS,VCS,J,,,,,,,7
+# 12,0V,K,,8097,2024-03-31,2024-06-29,0000007,0,68,AT7,,,,7:30,,7:30,VCS,VCS,J,,,,,,,7
+# 13,0V,K,8098,,2024-03-31,2024-06-29,0000007,0,68,AT7,VCS,VCS,10:10,,10:10,,,,J,,,,,,,7
+# 14,0V,K,,8063,2024-03-31,2024-10-26,0004000,0,68,AT7,,,,5:20,,5:20,VCS,VCS,J,,,,4,,,
+# 15,0V,K,8052,,2024-03-31,2024-05-18,0000060,0,68,AT7,VCS,VCS,3:50,,3:50,,,,J,,,,,,6,
+
+
+
+# Name,Age,Industry,Gender,Location,YearsExperience,Email,Phone
+# Bao,26,IT,male,Lam Dong,4,bao.tran@example.com,0901656020
+# Trang,18,BA,female,My Tho,8,trang.nguyen@example.com,0857353179
+# Linh,24,Finance,female,Ho Chi Minh City,2,linh.tran@example.com,0912345678
+# Minh,30,Marketing,male,Da Nang,7,minh.le@example.com,0908123456
+# Trang,28,Design,female,Can Tho,5,trang.pham@example.com,0934567890
+# Duc,32,Engineering,male,Hai Phong,10,duc.vo@example.com,0981234567
+# Thao,27,Education,female,Bien Hoa,3,thao.nguyen@example.com,0976543210
+# Khanh,25,Sales,male,Ha Long,2,khanh.do@example.com,0956789012
+# Quynh,29,HR,female,Hue,6,quynh.bui@example.com,0967890123
+# Tuan,35,Legal,male,Nha Trang,12,tuan.tran@example.com,0943216789
+# Mai,31,Healthcare,female,Vinh,8,mai.pham@example.com,0932109876
